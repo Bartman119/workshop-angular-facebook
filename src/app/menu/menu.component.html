@@ -5,10 +5,10 @@
 
     <ul class="nav nav-pills">
       <li class="nav-item">
-        <a class="nav-link text-white"> Strona główna </a>
+        <a class="nav-link text-white" routerLink="/" routerLinkActive="bg-danger" [routerLinkActiveOptions]="{ exact: true }"> Strona główna </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white"> Strona 404 </a>
+        <a class="nav-link text-white"  routerLink="/not-found" routerLinkActive="bg-danger" [routerLinkActiveOptions]="{ exact: true }"> Strona 404 </a>
       </li>
     </ul>
 </nav>
