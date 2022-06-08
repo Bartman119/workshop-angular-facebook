@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Post } from '../../interfaces/post.interface';
 
 @Component({
   selector: 'app-post-list-item',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostListItemComponent implements OnInit {
 
+  @Input() post: Post | null = null;
+  
   constructor() { }
 
   ngOnInit(): void {

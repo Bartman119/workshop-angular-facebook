@@ -12,6 +12,9 @@ import { PostListItemComponent } from './components/post-list-item/post-list-ite
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    PostListComponent,
   ]
 })
 export class PostsModule { }

@@ -1,1 +1,19 @@
-<p>post-list-item works!</p>
+<div class="card my-3" *ngIf="post">
+    <div class="card-header d-flex align-items-start">
+      <img [src]="post.author.avatarUrl" class="avatar rounded" alt />
+      <div class="flex-fill">
+        <a>
+          <h4>{{post.author.name}}</h4>
+        </a>
+        <a>
+          <small>{{post.createdTime | date}}</small>
+        </a>
+      </div>
+    </div>
+    <img class="card-img-top" alt [src]="post.images[0]" />
+    <div class="card-body">
+      <p class="card-text">{{ post.body }}</p>
+    </div>
+    <div class="card-footer">...</div>
+  </div>
+  
