@@ -5,18 +5,22 @@ import { PostListItemComponent } from './components/post-list-item/post-list-ite
 import { SharedModule } from '../shared/shared.module';
 import { PostsService } from './services/posts.service';
 import { HttpClientModule } from '@angular/common/http';
+import { PostProfilePageComponent } from './pages/post-profile-page/post-profile-page.component';
+import { PostsRoutingModule } from './posts-routing.module';
 
 
 
 @NgModule({
   declarations: [
     PostListComponent,
-    PostListItemComponent
+    PostListItemComponent,
+    PostProfilePageComponent
   ],
   imports: [
     CommonModule,
     SharedModule,
-    HttpClientModule
+    HttpClientModule,
+    PostsRoutingModule,
   ],
   exports: [
     PostListComponent,

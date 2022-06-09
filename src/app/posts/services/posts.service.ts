@@ -17,6 +17,10 @@ export class PostsService {
     return this.makeRequest<Post[]>(environment.postsUrl);
   }
 
+  getPostById(postId: string) {
+    return this.makeRequest<Post>(`${environment.postsUrl}/${postId}`);
+  }
+
   // getPostsForUser(userId: string) {
   //   return this.makeRequest<Post[]>(environment.postsUrl + userId);
   // }
