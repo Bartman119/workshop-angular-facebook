@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Post } from 'src/app/posts/interfaces/post.interface';
 import fixturePosts from '../../../../fixtures/posts.fixtures.json';
 
 @Component({
@@ -7,7 +8,7 @@ import fixturePosts from '../../../../fixtures/posts.fixtures.json';
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent implements OnInit {
-  fakePosts = fixturePosts;
+  fakePosts: Post[] = fixturePosts;
 
   constructor() { }
 
