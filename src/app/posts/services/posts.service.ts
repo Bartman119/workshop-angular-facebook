@@ -22,13 +22,6 @@ export class PostsService {
   // }
 
   private makeRequest<T>(url: string): Promise<T> {
-    // return new Promise(() => {
-    //   setTimeout(() => {
-    //     resolve([] as unknown as T);
-    //   })
-    // }))
-    
-    // return Promise.resolve<T>([] as unknown as T);
     return lastValueFrom<T>(this.httpClient.get<T>(url).pipe(
       delay(2000)));
   }
