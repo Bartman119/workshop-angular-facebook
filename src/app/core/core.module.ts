@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './core-routing.module';
+import { CoreRoutingModuel } from './core-routing.module';
 import { AppComponent } from './components/app/app.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
@@ -19,7 +19,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    CoreRoutingModuel,
     PostsModule,
     UserModule,
     FormsModule,
