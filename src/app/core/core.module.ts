@@ -10,6 +10,7 @@ import { PostsModule } from '../posts/posts.module';
 import { UserModule } from '../user/user.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { KeystrokesPanelComponent } from './components/keystrokes-panel/keystrokes-panel.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     MenuComponent,
     HomePageComponent,
     NotFoundPageComponent,
+    KeystrokesPanelComponent,
   ],
   imports: [
     BrowserModule,
