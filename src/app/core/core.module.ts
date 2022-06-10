@@ -7,6 +7,8 @@ import { MenuComponent } from './components/menu/menu.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
 import { PostsModule } from '../posts/posts.module';
+import { UserModule } from '../user/user.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { PostsModule } from '../posts/posts.module';
     BrowserModule,
     AppRoutingModule,
     PostsModule,
+    UserModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

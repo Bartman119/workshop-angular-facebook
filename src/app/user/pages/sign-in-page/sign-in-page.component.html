@@ -1,6 +1,7 @@
 <div>
     <form novalidate #loginForm="ngForm" (ngSubmit)="onSubmit()">
-      <div class="form-group">
+      <!-- <pre> {{loginForm.errors | json }}</pre> -->
+      <div class="form-group my-3">
         <label>
           E-mail
           <sup class="text-danger">*</sup>
@@ -13,14 +14,23 @@
           name="email"
           maxlength="50"
           minlength="3"
+          [(ngModel)]="credentials.email"
+          #email="ngModel"
         />
-        <small class="text-danger">
-          <span>Pole <em>email</em> jest puste</span>
-          <span>Pole <em>email</em> jest za długi</span>
-          <span>Pole <em>email</em> za krótkie </span>
+        <!-- <pre>touched={{ email.touched | json}}</pre>
+        <pre>untouched={{ email.untouched | json}}</pre>
+        <pre>dirty={{ email.dirty | json}}</pre>
+        <pre>pristine={{ email.pristine | json}}</pre>
+        <pre>valid={{ email.valid | json}}</pre>
+        <pre>invalid={{ email.invalid | json}}</pre>
+        <pre>{{ email.errors | json}}</pre> -->
+        <small class="text-danger" *ngIf="email.dirty">
+          <span *ngIf="email.errors?.['required']">Pole email jest wymagane</span>
+          <span *ngIf="email.errors?.['maxlength']">Pole email jest za długie</span>
+          <span *ngIf="email.errors?.['minlength']">Pole email za krótkie </span>
         </small>
       </div>
-      <div class="form-group">
+      <div class="form-group my-3">
         <label>
           Hasło
           <sup class="text-danger">*</sup>
@@ -31,14 +41,15 @@
           class="form-control field-password"
           name="password"
           autocomplete="current-password"
+          [(ngModel)]="credentials.password"
+          #password="ngModel"
         />
-        <small class="text-danger">
-          <span>Pole<em>password</em> jest puste</span>
-          <span>Pole <em>password</em> jest za długie</span>
-          <span>Pole <em>password</em> za krótkie</span>
+        <small class="text-danger" *ngIf="password.dirty">
+          <span *ngIf="password.errors?.['required']">Pole password jest wymagane</span>
         </small>
       </div>
       <button
+        [disabled]="loginForm.invalid"
         type="submit"
         class="btn btn-primary submit-form"
       >

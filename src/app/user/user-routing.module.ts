@@ -7,7 +7,7 @@ import { UserProfilePageComponent } from './pages/user-profile-page/user-profile
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'profile',
     component: UserProfilePageComponent
   },
   {
