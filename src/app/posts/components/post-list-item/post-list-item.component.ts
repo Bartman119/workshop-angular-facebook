@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, HostListener, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostBinding, HostListener, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Post } from '../../interfaces/post.interface';
 
@@ -14,6 +14,10 @@ export class PostListItemComponent implements OnInit {
   
   @HostListener('click') onClick() {
     this.router.navigateByUrl(this.getPostProfileUrl());
+  }
+
+  @HostBinding('class.p-5') get isWilburn() {
+    return this.post?.author.name === 'Wilburn Dicki';
   }
 
   constructor(private router: Router) { }
