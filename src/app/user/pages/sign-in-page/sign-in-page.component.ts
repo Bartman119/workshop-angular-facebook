@@ -30,8 +30,11 @@ export class SignInPageComponent implements OnInit {
 
   onSubmit() {
     console.log('test, onSubmit' , this.credentials);
-    this.userService.signIn(this.credentials as Credentials);
-    this.routes.navigateByUrl('user/profile');
+    const status = this.userService.signIn(this.credentials as Credentials);
+    if(status) {
+      this.routes.navigateByUrl('user/profile');
+    }
+    
   }
 
 }
