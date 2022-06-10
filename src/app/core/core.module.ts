@@ -9,6 +9,7 @@ import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.com
 import { PostsModule } from '../posts/posts.module';
 import { UserModule } from '../user/user.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [

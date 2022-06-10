@@ -8,6 +8,8 @@ import { Post } from '../../interfaces/post.interface';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PostListComponent implements OnInit {
+  p = 1;
+  
   @Input() posts: Post[] = [];
 
   constructor() { }
