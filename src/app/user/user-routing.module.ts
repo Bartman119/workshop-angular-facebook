@@ -11,19 +11,23 @@ const routes: Routes = [
     path: 'profile',
     component: UserProfilePageComponent,
     canActivate: [OnlyForAuthUserGuard],
+    title:" Profile * Facebook"
   },
   {
     path: 'register',
     component: SignUpPageComponent,
+    title:" Register * Facebook"
   },
   {
     path: 'login',
     component: SignInPageComponent,
+    title:" Login * Facebook"
   },
   {
     path: 'logout',
     component: SignOutPageComponent,
     canActivate: [OnlyForAuthUserGuard],
+    title:" Logout * Facebook"
   },
 ];
 
